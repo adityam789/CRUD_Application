@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title> This is index page</title>
+</head>
+<body>
+    <center>
+        <h1>How to Create CRUD Operation</h1>
+        <h2>Django Web Framework</h2>
+        <hr/>
+        
+        <table border="1">
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Student Email</th>
+                <th>Address</th>
+                <th>Mobile No</th>
+                <th>Gender</th>
+            </tr>
+            {% for displayst in crudst%}
+            <tr>
+                <td>{{displayst.id}}</td>
+                <td>{{displayst.stname}}</td>
+                <td>{{displayst.stemail}}</td>
+                <td>{{displayst.staddress}}</td>
+                <td>{{displayst.stnumber}}</td>
+                <td>{{displayst.stgender}}</td>
+                <td><a href="edit/{{displayst.id}}">Edit</a></td>
+                <td><a href="delete/{{displayst.id}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <br>
+        <a href={% url 'stinsert'%}><font size="5">Add Student Record</font></a>
+    </center>
+</body>
+</html>

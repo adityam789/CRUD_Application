@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>This is the Search Page</title>
+</head>
+<body>
+    <h1>Search Student Record</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table border="1">
+            <tr>
+                <td>Student Name</td>
+                <td><input type="text" name="stname" value="{{crudst.stname}}"></td>
+            </tr>
+            <tr>
+                <td>Student Email</td>
+                <td><input type="text" name="stemail" value="{{crudst.stemail}}"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="staddress" value="{{crudst.staddress}}"></td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td><input type="text" name="stnumber" value="{{crudst.stnumber}}"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="text" name="stgender" value="{{crudst.stgender}}"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
